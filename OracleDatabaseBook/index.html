@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Free Oracle Database Book</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=700">
+<meta property="og:title" content="Free Oracle Database Book" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://goalkicker.com/OracleDatabaseBook/OracleDatabaseGrow.png" />
+<meta property="og:url" content="https://books.goalkicker.com/OracleDatabaseBook" />
+<meta name="description" content="Getting started with Oracle Database, Getting started with PL/SQL, Anonymous PL/SQL Block, PL/SQL procedure, Data Dictionary, Dates, Working with Dates, DUAL table, JOINS, Handling NULL values, String Manipulation, IF-THEN-ELSE Statement, Different ways to update records and Functions" />
+<meta name="keywords" content="Oracle Database Book,Oracle Database Programming Books,Oracle Database PDF Book,Oracle Database Tutorial" />
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="https://books.goalkicker.com/OracleDatabaseBook/">
+<style>
+a:link, a:visited, a:hover, a:active {
+    color: #1a0dab;
+}
+
+.grow {
+	transition: all .3s ease-in-out;
+	transform: scale(0.9);
+}
+
+.grow:hover, .grow:focus {
+	transform: scale(1);
+}
+
+.books {
+	max-width: 1030px;
+	margin: auto;
+}
+
+img.grow {
+	border: 0px;
+}
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body, button {
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	background-color: #fafafa;
+}
+
+h1, h2 {
+	margin: 0px;
+}
+
+#header h1 {
+	margin-top: -2px;
+}
+
+img {
+	border: 0px;
+}
+
+button.download {
+	background-color: #f80000;
+	text-decoration:underline;
+	color: #ffffff;
+	border-radius:10px;
+	width: 300px;
+	height: 60px;
+	border: 0px;
+	cursor: pointer;
+	transform: scale(0.9);
+	transition: all .1s ease-in-out;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+button.signup {
+	background-color: #f80000;
+	text-decoration:underline;
+	color: #ffffff;
+	border-radius:10px;
+	width: 200px;
+	height: 60px;
+	border: 0px;
+	cursor: pointer;
+	transform: scale(0.9);
+	transition: all .1s ease-in-out;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.user-signup input {
+    width: 250px;
+    border: 1px solid #f80000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.user-signup th {
+	text-align: right;
+}
+
+button:hover {
+	transform: scale(1);
+}
+
+.contents {
+	text-align: left;
+	list-style-type: none;
+	margin: auto;
+	column-count: 2;
+	font-size: 14px;
+	counter-reset: chapterCount 0 appendixCount 0;
+}
+
+.feedback-list {
+	column-count: 2;
+}
+
+.contents li.chapter-type:before { 
+	counter-increment: chapterCount;
+	content: 'Chapter 'counter(chapterCount)': ';
+}
+
+.contents li.appendix-type:before { 
+	counter-increment: appendixCount;
+	content: 'Appendix 'counter(appendixCount, upper-alpha)': ';
+}
+
+#page {
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 90px;
+	padding-bottom: 140px;
+	background-color: #ffffff;
+	max-width: 1100px;
+}
+
+#header {
+	width: 100%;
+	min-height: 50px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 4;
+}
+
+#headerBackground {
+	width: 100%;
+	min-height: 50px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #ffffff;
+	z-index: 3;
+	opacity: 0.6;
+	box-shadow: 0px 0px 18px 0px #cccccc;
+}
+
+#headerBackground h1 {
+	color: #ffffff;
+}
+
+#footer {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding: 10px;
+	z-index: 4;
+}
+
+#footerBackground {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: #ffffff;
+	padding: 10px;
+	z-index: 3;
+	opacity: 0.6;
+	box-shadow: 0px 0px 18px 0px #cccccc;
+}
+
+.pagePreview {
+    border: 1px solid #cccccc;
+    box-shadow: 0px 0px 18px 0px #cccccc;
+}
+
+.pagePreview2 {
+    box-shadow: 0px 0px 18px 0px #666666;
+}
+
+#frontpage {
+	float: left;
+	width: 45%;
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+#contents {
+	float: left;
+	width: 45%;
+	text-align: left;
+}
+
+#examplePages {
+	clear: both;
+	padding-top: 20px;
+}
+
+.notice {
+	font-size: 14px;
+	width: 55%;
+	text-align: left;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.notice-small {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.view-more {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.notice a:link, .notice a:visited, .notice a:hover, .notice a:active {
+    color: #000000;
+}
+
+.no-pad {
+	margin: 0px;
+}
+
+.feedback {
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	atext-align: left;
+	width: 85%;
+}
+
+.feedback h2 {
+	text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+	#frontpage {
+		width: 95%;
+		text-align: center;
+	}
+
+	#contents {
+		width: 95%;
+	}
+	
+	#footer {
+		height: 80px;
+	}
+
+	#footerBackground {
+		height: 80px;
+	}
+	
+	.contents {
+		column-count: 1;
+	}
+	
+	.notice {
+		width: 80%;
+	}
+	
+	.feedback-list {
+		column-count: 1;
+	}
+}
+
+blockquote {
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+}
+
+.quotation{
+	quotes: "\201C""\201D""\2018""\2019";
+	padding: 2px 10px;
+	line-height: 1.4;
+}
+
+.quotation:before {
+	content: open-quote;
+	display: inline;
+	height: 0;
+	line-height: 0;
+	left: -2px;
+	position: relative;
+	top: 5px;
+	color: #ccc;
+	font-size: 28px;
+}
+
+.quotation::after {
+	content: close-quote;
+	display: inline;
+	height: 0;
+	line-height: 0;
+	left: 2px;
+	position: relative;
+	top: 10px;
+	color: #ccc;
+	font-size: 28px;
+}
+
+.sign-up {
+	margin-bottom: 40px;
+}
+
+.bookContainer {
+	display: inline-block;
+}
+</style>
+<script>
+var com = com || {};
+com.goalkicker = com.goalkicker || {};
+com.goalkicker.headerFooterGlassEffect = com.goalkicker.headerFooterGlassEffect || {};
+com.goalkicker.headerFooterGlassEffect.headerContent = null;
+com.goalkicker.headerFooterGlassEffect.footerContent = null;
+com.goalkicker.headerFooterGlassEffect.blurAmount = 10;
+
+com.goalkicker.headerFooterGlassEffect.load = function() {
+	var hfge = com.goalkicker.headerFooterGlassEffect;
+	hfge.headerContent = hfge.createReflectElement(true);
+	hfge.footerContent = hfge.createReflectElement(false);
+	document.body.appendChild(hfge.headerContent.parentElement);
+	document.body.appendChild(hfge.footerContent.parentElement);
+	hfge.positionAll();
+	document.addEventListener("scroll", function() {
+		hfge.positionAll();
+	});
+
+	document.addEventListener("touchmove", function() {
+		hfge.positionAll();
+	});
+	
+	window.addEventListener("resize", function() {
+		hfge.positionAll();
+	});
+};
+
+com.goalkicker.headerFooterGlassEffect.getCopy =  function() {
+	var hfge = com.goalkicker.headerFooterGlassEffect;
+	var pageElement = document.getElementById("page");
+	var copyPageElement = document.createElement("div");
+	copyPageElement.style.position = "absolute"
+	copyPageElement.style.backgroundColor = "#FFFFFF";
+	copyPageElement.style.filter = "blur(" + hfge.blurAmount + "px)";
+	copyPageElement.style.zIndex = 1;
+	copyPageElement.innerHTML = pageElement.innerHTML;
+	return copyPageElement;
+}
+
+com.goalkicker.headerFooterGlassEffect.createReflectElement = function(isHeader) {
+	var hfge = com.goalkicker.headerFooterGlassEffect;
+	var elementRelect = document.createElement("div");
+	elementRelect.style.left = "0px";
+	elementRelect.style.zIndex = 2;
+	elementRelect.style.overflow = "hidden";
+	if (isHeader) {
+		elementRelect.style.top = "0px";
+	} else {
+		elementRelect.style.bottom = "0px";
+	}
+	
+	var contentElement = hfge.getCopy();
+	elementRelect.style.position = "fixed"
+	elementRelect.appendChild(contentElement);
+	return contentElement;
+};
+
+com.goalkicker.headerFooterGlassEffect.positionItem = function(content, isHeader) {
+	var pageElement = document.getElementById("page");
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+	var computedStyle = getComputedStyle(pageElement, null);
+	var pageElementPaddingTop = parseInt(computedStyle.getPropertyValue("padding-top"), 10);
+	var pageElementPaddingLeft = parseInt(computedStyle.getPropertyValue("padding-left"), 10);
+	var pageElementPaddingRight = parseInt(computedStyle.getPropertyValue("padding-right"), 10);
+	var originalElement = null;
+	content.style.width = (pageElement.offsetWidth - pageElementPaddingLeft - pageElementPaddingRight) + "px";
+	content.style.height = (pageElement.offsetHeight - pageElementPaddingTop) + "px";
+	content.style.left = (pageElement.offsetLeft + pageElementPaddingLeft) + "px";
+	if (isHeader) {
+		originalElement = document.getElementById("header");
+		content.style.top = (-scrollTop + pageElementPaddingTop) + "px";
+	} else {
+		originalElement = document.getElementById("footer");
+		content.style.top = (-scrollTop + pageElementPaddingTop - window.innerHeight + content.parentElement.offsetHeight) + "px";
+	}
+	
+	content.parentElement.style.width = originalElement.offsetWidth + "px";
+	content.parentElement.style.height = originalElement.offsetHeight + "px";
+};
+
+com.goalkicker.headerFooterGlassEffect.positionAll = function() {
+	var hfge = com.goalkicker.headerFooterGlassEffect;
+	hfge.positionItem(hfge.headerContent, true);
+	hfge.positionItem(hfge.footerContent, false);
+};
+
+function submitForm() {
+	var nameValue = document.getElementById("name").value;
+	var emailValue = document.getElementById("email").value;
+	var http = new XMLHttpRequest();
+	var url = "../sendEmail.php";
+	var params = "message=" + encodeURIComponent(nameValue + ":" + emailValue + ":" + window.location);
+	http.open("POST", url, true);
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	http.onreadystatechange = function() {
+		if (http.readyState == 4 && http.status == 200) {
+			alert("Success");
+		}
+	}
+	http.send(params);
+	
+	return false;
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111565129-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-111565129-1');
+</script>
+</head>
+<body>
+<div id="headerBackground"><h1>Oracle<sup><span style="font-size:10pt">®</span></sup> Database Notes for Professionals book</h1></div>
+<div id="header"><h1>Oracle<sup><span style="font-size:10pt">®</span></sup> Database Notes for Professionals book</h1></div>
+<div id="page">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Test -->
+<ins class="adsbygoogle"
+	 style="display:block"
+	 data-ad-client="ca-pub-0641570161571893"
+	 data-ad-slot="7571798105"
+	 data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div id="frontpage">
+<a href="OracleDatabaseNotesForProfessionals.pdf"><img src="OracleDatabaseGrow.png" width="350" height="495" class="pagePreview2" alt="Oracle® Database Book preview"></a><br />
+<small>Oracle® Database Notes for Professionals book</small>
+<br /><br />
+<script>
+reddit_url = 'https://books.goalkicker.com/OracleDatabaseBook/';
+reddit_title = 'Free Oracle Database Book';
+reddit_newwindow = '1';
+</script>
+<script src="//www.redditstatic.com/button/button3.js"></script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+<script type="IN/Share" data-url="https://books.goalkicker.com/OracleDatabaseBook/" data-counter="top"></script>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbooks.goalkicker.com%2FOracleDatabaseBook/&layout=box_count&size=large&mobile_iframe=true&appId=1419253208402557&width=73&height=58" width="73" height="58" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Free Oracle Database Book"
+  data-size="large">
+Tweet</a>
+<p class="no-pad"><small>If you found this free Oracle® Database book useful,<br />then please share it &#10084;</small></p>
+	</div>
+	<div id="contents">
+	<h2>Chapters</h2>
+	<ol class="contents">
+		<li class="chapter-type">Getting started with Oracle Database</li>
+		<li class="chapter-type">Getting started with PL/SQL</li>
+		<li class="chapter-type">Anonymous PL/SQL Block</li>
+		<li class="chapter-type">PL/SQL procedure</li>
+		<li class="chapter-type">Data Dictionary</li>
+		<li class="chapter-type">Dates</li>
+		<li class="chapter-type">Working with Dates</li>
+		<li class="chapter-type">DUAL table</li>
+		<li class="chapter-type">JOINS</li>
+		<li class="chapter-type">Handling NULL values</li>
+		<li class="chapter-type">String Manipulation</li>
+		<li class="chapter-type">IF-THEN-ELSE Statement</li>
+		<li class="chapter-type">Limiting the rows returned by a query (Pagination)</li>
+		<li class="chapter-type">Recursive Sub-Query Factoring using the WITH Clause (A.K.A. Common Table Expressions)</li>
+		<li class="chapter-type">Different ways to update records</li>
+		<li class="chapter-type">Update with Joins</li>
+		<li class="chapter-type">Functions</li>
+		<li class="chapter-type">Statistical functions</li>
+		<li class="chapter-type">Window Functions</li>
+		<li class="chapter-type">Creating a Context</li>
+		<li class="chapter-type">Splitting Delimited Strings</li>
+		<li class="chapter-type">Collections and Records</li>
+		<li class="chapter-type">Object Types</li>
+		<li class="chapter-type">Loop</li>
+		<li class="chapter-type">Cursors</li>
+		<li class="chapter-type">Sequences</li>
+		<li class="chapter-type">Indexes</li>
+		<li class="chapter-type">Hints</li>
+		<li class="chapter-type">Packages</li>
+		<li class="chapter-type">Exception Handling</li>
+		<li class="chapter-type">Error logging</li>
+		<li class="chapter-type">Database Links</li>
+		<li class="chapter-type">Table partitioning</li>
+		<li class="chapter-type">Oracle Advanced Queuing (AQ)</li>
+		<li class="chapter-type">constraints</li>
+		<li class="chapter-type">Autonomous Transactions</li>
+		<li class="chapter-type">Oracle MAF</li>
+		<li class="chapter-type">level query</li>
+		<li class="chapter-type">Hierarchical Retrieval With Oracle Database 12C</li>
+		<li class="chapter-type">Data Pump</li>
+		<li class="chapter-type">Bulk collect</li>
+		<li class="chapter-type">Real Application Security</li>
+		<li class="chapter-type">Assignments model and language</li>
+		<li class="chapter-type">Triggers</li>
+		<li class="chapter-type">Dynamic SQL</li>
+	</ol>
+	</div>
+	<div id="examplePages">
+	<h2>Example book pages</h2>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Test -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-0641570161571893"
+		 data-ad-slot="7571798105"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+<img src="OracleDatabaseExamplePage1.png" width="500" height="707" class="pagePreview" alt="Oracle® Database Example Page 1"><img src="OracleDatabaseExamplePage2.png" width="500" height="707" class="pagePreview" alt="Oracle® Database Example Page 2"><br />	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Test -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-0641570161571893"
+		 data-ad-slot="7571798105"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script><img src="OracleDatabaseExamplePage3.png" width="500" height="707" class="pagePreview" alt="Oracle® Database Example Page 3"><img src="OracleDatabaseExamplePage4.png" width="500" height="707" class="pagePreview" alt="Oracle® Database Example Page 4">
+	</div>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Test -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-0641570161571893"
+		 data-ad-slot="7571798105"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<div class="feedback">
+		<h2>What people are saying about Notes for Professionals books</h2>
+		<div class="feedback-list">
+		<blockquote><p class="quotation">Hey Bro! I have been dabbing in Oracle for like a year and a half. This is really helpful! :)</p></blockquote>
+		<blockquote><p class="quotation">Thanks , it's very useful</p></blockquote>
+		<blockquote><p class="quotation">Thanks. Great job!</p></blockquote>
+		<blockquote><p class="quotation">Really nice and condensed collection, thanks to all co-authors</p></blockquote>
+		<blockquote><p class="quotation">Super useful for reference, many thanks for whoever did this. Instead of browsing, clicking, digging infinitely, now I have ONE in one place.</p></blockquote>
+		<blockquote><p class="quotation">Whoah, this is awesome! Thanks!!!!!!</p></blockquote>
+</div>
+	</div>
+	<div class="notice">
+		<p>The <i>Oracle® Database Notes for Professionals</i> book is compiled from <a href="https://archive.org/details/documentation-dump.7z" target="_blank">Stack Overflow Documentation</a>, the content is written by the beautiful people at Stack Overflow. Text content is released under Creative Commons BY-SA. See credits at the end of this book whom contributed to the various chapters. Images may be copyright of their respective owners unless otherwise specified</p>
+		<p>Book created for educational purposes and is not affiliated with Oracle® Database group(s), company(s) nor Stack Overflow. All trademarks belong to their respective company owners</p>
+		<p>118 pages, published on May 2018</p>
+	</div>
+	<div class="sign-up">
+	<form>
+	<h2>Sign up for changes to Oracle® Database Notes for Professionals book</h2>
+	<table style="margin:auto;" class="user-signup">
+		<tr><th>Name:</th><td><input type="text" id="name" /></td></tr>
+		<tr><th>Email:</th><td><input type="text" id="email" /></td></tr>
+		<tr><td colspan="2"><button class="signup" onclick="return submitForm()">Sign up</button></td></tr>
+	</table>
+	</form>
+	</div>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Test -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-0641570161571893"
+		 data-ad-slot="7571798105"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<div class="view-more">
+	<div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/JavaBook/" target="_blank"><img src="../JavaBook/JavaSmall.png" width="150" height="212" alt="Java Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/LinuxBook/" target="_blank"><img src="../LinuxBook/LinuxSmall.png" width="150" height="212" alt="Linux Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/MicrosoftSQLServerBook/" target="_blank"><img src="../MicrosoftSQLServerBook/MicrosoftSQLServerSmall.png" width="150" height="212" alt="MicrosoftSQLServer Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/MongoDBBook/" target="_blank"><img src="../MongoDBBook/MongoDBSmall.png" width="150" height="212" alt="MongoDB Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/MySQLBook/" target="_blank"><img src="../MySQLBook/MySQLSmall.png" width="150" height="212" alt="MySQL Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/PostgreSQLBook/" target="_blank"><img src="../PostgreSQLBook/PostgreSQLSmall.png" width="150" height="212" alt="PostgreSQL Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/PHPBook/" target="_blank"><img src="../PHPBook/PHPSmall.png" width="150" height="212" alt="PHP Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/RBook/" target="_blank"><img src="../RBook/RSmall.png" width="150" height="212" alt="R Book"></a></div>
+		<div class="bookContainer grow"><a href="https://goalkicker.com/SQLBook/" target="_blank"><img src="../SQLBook/SQLSmall.png" width="150" height="212" alt="SQL Book"></a></div>
+		</div>
+	<h3><a href="https://goalkicker.com/" target="_blank">View More Programming Books</a></h3>
+	</div>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Test -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-0641570161571893"
+		 data-ad-slot="7571798105"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<div class="notice notice-small">
+		<p>To support continued development and improvements to this book, please consider a small bitcoin donation: 1H63m55bw6KDYUaKU1mYLGrzDf4wcrVzhX</p>
+	</div>
+	</div>
+	<div id="footerBackground"></div>
+	<div id="footer">OracleDatabaseNotesForProfessionals.pdf <button class="download" onclick="location.href='OracleDatabaseNotesForProfessionals.pdf'">Download PDF Book</button></div>
+<script>
+com.goalkicker.headerFooterGlassEffect.load();
+
+window.onload = function() {
+	var hfge = com.goalkicker.headerFooterGlassEffect;
+	hfge.positionAll();
+}
+</script>
+</body>
+</html>
